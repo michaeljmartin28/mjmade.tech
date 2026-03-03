@@ -1,57 +1,78 @@
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import TypingWords from "./components/TypingWords";
+import Link from "next/link";
+import Agent from "./components/agent/Agent";
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-bg text-text">
-      <section className="py-24">
+    <div className="min-h-full bg-bg text-text">
+      <section className="py-12">
         <div className="max-w-4xl mx-auto px-6 space-y-6">
           <h1 className="text-6xl font-bold tracking-tight text-primary">
-            Michael Made This
+            Hi, my name is Michael Martin. <br />
+            I&apos;m a <TypingWords />
           </h1>
 
           <p className="text-xl text-textMuted max-w-2xl leading-relaxed">
-            Backend engineer specializing in distributed systems, security, and
-            practical AI. Building real tools, real demos, and real explanations
-            — all under mjmade.tech.
+            I&apos;m a software engineer with a passion for building robust,
+            secure systems. With a background in offensive security, I have a
+            unique perspective on how to design and implement software that can
+            withstand real-world attacks. I enjoy working on projects that
+            challenge me to think critically and creatively about engineering
+            problems.
+            <br /> <br />I believe in continuous learning and growth, both
+            personally and professionally, and I&apos;m always looking for
+            opportunities to connect with like-minded individuals and
+            collaborate on interesting projects.
+            <br />
+            <br />
+            When I&apos;m not coding, you can find me exploring new technologies
+            or spending time with my family. I enjoy 3D printing, chess, and
+            getting lost in worlds like Gielinor, Night City, the Continent, and
+            Tamriel, just to name a few. This site is a collection of my
+            projects, skills, and thoughts. Feel free to explore and reach out
+            if you would like to connect!
           </p>
+        </div>
+        <div className="max-w-4xl mt-8 mx-auto px-6 flex">
+          <a
+            className="mx-auto text-4xl text-textMuted hover:text-primary transition-colors"
+            href="https://github.com/michaeljmartin28"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub />
+          </a>
+          <a
+            className="mx-auto text-4xl text-textMuted hover:text-primary transition-colors"
+            href="https://www.linkedin.com/in/michael-martin-95a26611a/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin />
+          </a>
         </div>
       </section>
 
-      <section className="py-12 bg-surface border-t border-border">
-        <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <a
-            href="/projects"
-            className="p-6 rounded-xl bg-surfaceAlt border border-border hover:bg-surface transition-colors"
-          >
-            <h2 className="text-2xl font-semibold text-primary mb-2">
-              Projects
-            </h2>
-            <p className="text-textMuted text-sm">
-              Real engineering work with clear writeups.
-            </p>
-          </a>
+      <section className="">
+        <p className="text-center text-lg text-textMuted max-w-2xl mx-auto leading-relaxed">
+          Want to learn more? Check out my projects, skills, and blog for deep
+          dives into my work and thoughts on software engineering and security.
+        </p>
 
-          <a
-            href="/agent"
-            className="p-6 rounded-xl bg-surfaceAlt border border-border hover:bg-surface transition-colors"
+        <div className="flex mx-auto mt-8 gap-6">
+          <Link
+            className="mx-auto block bg-primary text-text px-6 py-3 rounded-lg animation-flowGradient"
+            href="/skills"
           >
-            <h2 className="text-2xl font-semibold text-primary mb-2">
-              AI Agent
-            </h2>
-            <p className="text-textMuted text-sm">
-              A practical agent powered by your Go backend.
-            </p>
-          </a>
-
-          <a
-            href="/mfa"
-            className="p-6 rounded-xl bg-surfaceAlt border border-border hover:bg-surface transition-colors"
+            Explore My Skills
+          </Link>
+          <Link
+            className="mx-auto block bg-primary text-text px-6 py-3 rounded-lg animation-flowGradient"
+            href="/blog"
           >
-            <h2 className="text-2xl font-semibold text-primary mb-2">
-              MFA Demo
-            </h2>
-            <p className="text-textMuted text-sm">
-              A simple, secure multi‑factor authentication flow.
-            </p>
-          </a>
+            Read My Blog
+          </Link>
         </div>
       </section>
     </div>

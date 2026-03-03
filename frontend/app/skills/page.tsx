@@ -91,7 +91,7 @@ export default function SkillsPage() {
   const selected = skills.find((s) => s.id === active);
 
   return (
-    <div className="min-h-screen bg-bg text-text py-20 px-6">
+    <div className="min-h-full bg-bg text-text py-20 px-6">
       <div className="max-w-5xl mx-auto space-y-12">
         <header className="space-y-4">
           <h1 className="text-5xl font-bold tracking-tight text-primary">
