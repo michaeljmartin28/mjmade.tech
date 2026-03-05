@@ -1,17 +1,18 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import TypingWords from "./components/TypingWords";
 import Link from "next/link";
-import Agent from "./components/agent/Agent";
 
 export default function Home() {
   return (
     <div className="min-h-full bg-bg text-text">
-      <section className="py-12">
+      <section className="py-10">
         <div className="max-w-4xl mx-auto px-6 space-y-6">
-          <h1 className="text-6xl font-bold tracking-tight text-primary">
-            Hi, my name is Michael Martin. <br />
-            I&apos;m a <TypingWords />
-          </h1>
+          <div className="block min-h-[10rem] sm:min-h-0">
+            <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-primary">
+              Hi, my name is Michael Martin. <br />
+              I&apos;m a <TypingWords />
+            </h1>
+          </div>
 
           <p className="text-xl text-textMuted max-w-2xl leading-relaxed">
             I&apos;m a software engineer with a passion for building robust,

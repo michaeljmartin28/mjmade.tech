@@ -14,7 +14,7 @@ const words = [
 
 const colors = [
   "text-green-300",
-  "text-red-300",
+  "text-red-600",
   "text-blue-300",
   "text-orange-300",
   "text-pink-300",

@@ -6,7 +6,9 @@ export function ChatPanel({ open, onClose, children }: any) {
       }`}
     >
       <div className="flex items-center justify-between p-4 border-b border-border">
-        <div className="font-semibold text-text">Chat with the Assistant</div>
+        <div className="font-semibold text-text">
+          Try asking the Agent about my projects, skills, or experience
+        </div>
         <button
           onClick={onClose}
           className="text-textMuted hover:text-text transition-colors"
