@@ -65,7 +65,7 @@ export default function Nav() {
   };
 
   return (
-    <nav className="w-full bg-bg border-b border-border">
+    <nav className="w-full border-b border-border">
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/">Home</Link>
         <Link href="/skills">Skills</Link>

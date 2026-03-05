@@ -4,85 +4,171 @@ import { useState } from "react";
 
 const skills = [
   {
-    id: "go",
-    name: "Go",
+    id: "backend",
+    name: "Backend Engineering",
+    proficiency: "Advanced",
     description:
-      "Primary backend language. Used for distributed systems, APIs, concurrency-heavy workloads, and secure backend services.",
-    technologies: ["Go", "gRPC", "REST", "Concurrency", "Testing"],
+      "Expertise in building scalable, secure distributed systems and high-throughput APIs. Specializing in identity-driven architectures, multi-party coordination, and resilient asynchronous workloads.",
+    technologies: [
+      "Node.js",
+      "Python",
+      "Go",
+      "TypeScript",
+      "gRPC",
+      "OAuth2 / OIDC",
+      "mTLS",
+      "Hyperledger Fabric",
+      "Redis",
+      "MongoDB",
+      "Docker Swarm",
+      "Async Patterns",
+    ],
     experience:
-      "5+ years building production systems, authentication flows, and distributed services.",
+      "5+ years engineering production-grade services across Node.js, Python, and Go. Architected Fabric-based blockchain networks and chaincode operations. Expert in managing complex identity flows, distributed debugging, and high-performance job pipelines. Proven track record of securing service-to-service communication and optimizing containerized environments for scale.",
   },
   {
-    id: "fabric",
-    name: "Hyperledger Fabric",
+    id: "appsec",
+    name: "Application Security",
+    proficiency: "Advanced",
     description:
-      "Designed, built, and operated Fabric-based systems including chaincode, MSP configuration, multi-org networks, and secure ledger operations.",
-    technologies: ["Fabric CA", "MSP", "CouchDB", "Chaincode (Go)", "Orderers"],
+      "Expertise in 'Secure-by-Design' architecture, focusing on robust identity management, modern authentication flows, and proactive threat modeling.",
+    technologies: [
+      "OAuth2",
+      "OIDC",
+      "JWT",
+      "PKCE",
+      "MFA",
+      "Code Reviews",
+      "Secure Coding",
+      "Threat Modeling",
+    ],
     experience:
-      "Led architecture and implementation of enterprise Fabric deployments with multi-org governance.",
+      "Specialist in securing distributed systems and R&D projects. Lead internal code reviews to eliminate vulnerability classes before they hit production. Facilitate cyber tabletop exercises to simulate realistic attack paths, mapping architectural weaknesses to actionable mitigation strategies and guiding engineering teams through secure implementation patterns.",
   },
   {
-    id: "chaincode",
-    name: "Chaincode Development",
+    id: "pentest",
+    name: "Offensive Security & Pentesting",
+    proficiency: "Advanced / OSCP",
     description:
-      "Implemented smart contracts in Go with deterministic logic, rich queries, endorsement policies, and secure state transitions.",
-    technologies: ["Go", "Fabric SDK", "CouchDB Queries"],
+      "Certified Offensive Security Professional (OSCP) with a focus on manual exploitation, application security, and red-team operations.",
+    technologies: [
+      "Kali Linux",
+      "Burp Suite",
+      "Nmap",
+      "Python",
+      "Nessus",
+      "gobuster",
+      "dirbuster",
+      "john the ripper",
+      "hashcat",
+      "Metasploit",
+      "hydra",
+      "ettercap",
+      "aircrack-ng",
+      "hak5 tools",
+      "Wireshark",
+      "sqlmap",
+      "Custom Tooling",
+    ],
     experience:
-      "Built production-grade chaincode for enterprise workflows and secure multi-party transactions.",
+      "OSCP Certified. Graduate-level Instructor at NJIT for 'Counter Hacking Techniques,' teaching exploit development and vulnerability analysis. Active Red-Team contributor performing full-cycle assessments—from initial recon to source-code-assisted reviews and practical mitigation strategies. Experienced in mapping realistic attack paths and leading tabletop exercises for organizational response evaluation.",
   },
   {
-    id: "oidc",
-    name: "OAuth2 / OIDC",
+    id: "cloud",
+    name: "Cloud & Infrastructure",
+    proficiency: "Proficient",
     description:
-      "Deep experience designing and implementing secure authentication flows and token-based identity systems.",
-    technologies: ["OAuth2", "OIDC", "JWT", "PKCE", "Session Security"],
+      "I use cloud services to deploy backend applications, host internal tools, and support R&D environments. My work focuses on configuring core cloud primitives, managing secure access, and running containerized services in a way that supports development and experimentation without overclaiming large‑scale production ops.",
+    technologies: [
+      "AWS (EC2, S3, IAM, Lambda, Route 53)",
+      "Docker",
+      "Docker Swarm",
+      "Reverse Proxies",
+      "Network Configuration",
+      "Firewalls",
+      "Linux",
+    ],
     experience:
-      "Designed secure auth flows for enterprise systems and modern web applications.",
+      "Set up and maintained cloud-hosted environments for backend services, prototypes, and internal tools. Configured EC2 instances, storage, DNS, and serverless functions; managed IAM roles and secure access patterns; and deployed containerized applications for development and testing. Worked with Linux-based systems, reverse proxies, and CI pipelines to support backend and security-focused projects.",
   },
   {
-    id: "llm",
-    name: "LLM Agents",
+    id: "languages",
+    name: "Languages & Tooling",
+    proficiency: "Mixed",
     description:
-      "Practical experience building retrieval-based agents, tool integrations, and structured reasoning pipelines.",
-    technologies: ["Embeddings", "Vector Search", "RAG", "Tooling APIs"],
+      "Specializing in high-performance backend architecture with a focus on scalability and developer experience.",
+    technologies: [
+      "Python (Advanced)",
+      "Node.js (Advanced)",
+      "TypeScript (Proficient)",
+      "Go (Proficient)",
+      "Java (Familiar)",
+      "C# (Familiar)",
+      "C (Familiar)",
+      "Git",
+      "Jira",
+      "VS Code",
+      "Docker",
+      "Linux",
+    ],
     experience:
-      "Built practical agents with real-world constraints, including your Go-powered AI agent.",
+      "5+ YOE building production-grade services. Proven track record of optimizing system throughput, managing complex state in distributed environments, and mentoring teams on idiomatic and secure coding standards.",
   },
   {
-    id: "react",
-    name: "React / Next.js",
+    id: "fullstack",
+    name: "Full‑Stack Development",
+    proficiency: "Intermediate",
     description:
-      "Modern frontend development with server components, routing, and clean UI architecture.",
-    technologies: ["React", "Next.js", "Server Components", "Routing"],
+      "Modern full‑stack development across React, Next.js, Vue, Node.js, and clean UI architecture.",
+    technologies: [
+      "React",
+      "Next.js",
+      "Vue",
+      "Node.js",
+      "Express",
+      "TypeScript",
+      "Tailwind CSS",
+      "Routing",
+      "Middleware",
+      "API Integration",
+    ],
     experience:
-      "Built multiple production-grade frontends including mjmade.tech.",
+      "Built multiple production-grade frontends and full-stack applications, including mjmade.tech and internal workflow-driven UIs using Vue and Node.js backends.",
   },
   {
-    id: "tailwind",
-    name: "Tailwind CSS",
+    id: "containers",
+    name: "Containerization & Orchestration",
+    proficiency: "Advanced",
     description:
-      "Utility-first styling with semantic tokens and theme-driven design.",
-    technologies: ["Tailwind", "Design Tokens", "Dark Mode", "Responsive UI"],
+      "Building lean, secure, and production-ready containerized environments using Docker and Compose. Skilled in multi-stage builds, internal networking, resource constraints, and integrating containerized services into CI/CD workflows.",
+    technologies: [
+      "Docker",
+      "Docker Compose",
+      "Docker Swarm",
+      "Container Networking & Volumes",
+      "Layer Caching & Image Optimization",
+      "Resource Constraints",
+      "CI/CD Pipeline Integration",
+    ],
     experience:
-      "Built a fully theme-driven design system for mjmade.tech using CSS variables.",
+      "Designed optimized multi-stage builds and caching strategies that significantly reduced image sizes and build times. Managed persistent volumes, secure service-to-service communication, and multi-container environments in production-like deployments.",
   },
   {
-    id: "docker",
-    name: "Docker",
+    id: "linux-systems",
+    name: "Systems & Linux Engineering",
+    proficiency: "Advanced",
     description:
-      "Containerization for local development, CI pipelines, and production deployments.",
-    technologies: ["Docker", "Compose", "Images", "Networking"],
+      "Deep experience with POSIX environments, focusing on system observability, process management, and infrastructure automation.",
+    technologies: [
+      "Bash/Zsh Scripting",
+      "Process Management (systemd, signals)",
+      "Observability (strace, lsof, htop)",
+      "Networking (iptables, netstat, dig)",
+      "SSH & Key Management",
+      "Filesystem Internals (Inodes, Mounts)",
+    ],
     experience:
-      "Used extensively for backend services, Fabric networks, and development environments.",
-  },
-  {
-    id: "linux",
-    name: "Linux",
-    description:
-      "Comfortable with system administration, networking, and troubleshooting.",
-    technologies: ["Bash", "Networking", "Systemd", "Permissions"],
-    experience:
-      "Daily driver for backend development, debugging, and server operations.",
+      "Comfortable navigating the kernel-level boundary to diagnose performance bottlenecks and 'silent' failures. Expertise in automating complex tasks via robust shell scripting, managing user permissions (OCTAL/ACL), and securing containerized environments by mitigating root-access risks and container escapes.",
   },
 ];
 
@@ -91,7 +177,7 @@ export default function SkillsPage() {
   const selected = skills.find((s) => s.id === active);
 
   return (
-    <div className="min-h-full bg-bg text-text py-20 px-6">
+    <div className="min-h-full text-text py-10 px-2">
       <div className="max-w-5xl mx-auto space-y-12">
         <header className="space-y-4">
           <h1 className="text-5xl font-bold tracking-tight text-primary">
@@ -103,7 +189,7 @@ export default function SkillsPage() {
         </header>
 
         {/* Pill button grid */}
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-2">
           {skills.map((skill) => (
             <button
               key={skill.id}
@@ -124,9 +210,15 @@ export default function SkillsPage() {
           key={selected.id}
           className="bg-surfaceAlt border border-border rounded-xl p-6 animate-slideFadeIn"
         >
-          <h2 className="text-3xl font-semibold text-primary mb-4">
-            {selected.name}
-          </h2>
+          <div className="flex justify-between items-center gap-4 mb-4">
+            <h2 className="text-3xl font-semibold text-primary">
+              {selected.name}
+            </h2>
+
+            <span className="inline-block text-sm px-3 py-1 rounded-full bg-surface border border-border text-textMuted">
+              {selected.proficiency}
+            </span>
+          </div>
 
           <p className="text-textMuted mb-6">{selected.description}</p>
 

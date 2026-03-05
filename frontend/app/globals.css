@@ -8,6 +8,7 @@
   --color-surface: 245 245 245;
   --color-surface-alt: 230 230 230;
   --color-border: 210 210 210;
+  --bg-gradient: linear-gradient(to bottom, #ffffff, #f5f5f7);
 
   --color-text: 15 23 42;
   --color-text-muted: 100 116 139;
@@ -29,6 +30,8 @@
   --color-surface-alt: 42 33 63;
   --color-border: 63 53 89;
 
+  --bg-gradient: linear-gradient(to top, #2a1f3d, #1b1429, #0b0911, #000000);
+
   --color-text: 235 233 245; /* soft lavender-white */
   --color-text-muted: 180 170 200;
 
@@ -43,8 +46,10 @@
 }
 
 body {
-  background: rgb(var(--color-bg));
+  background: var(--bg-gradient), rgb(var(--color-bg));
   color: rgb(var(--color-text));
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 @keyframes slideFadeIn {
