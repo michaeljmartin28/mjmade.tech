@@ -206,43 +206,45 @@ export default function SkillsPage() {
           ))}
         </div>
 
-        <div
-          key={selected.id}
-          className="bg-surfaceAlt border border-border rounded-xl p-6 animate-slideFadeIn"
-        >
-          <div className="flex justify-between items-center gap-4 mb-4">
-            <h2 className="text-3xl font-semibold text-primary">
-              {selected.name}
-            </h2>
+        {selected && (
+          <div
+            key={selected.id}
+            className="bg-surfaceAlt border border-border rounded-xl p-6 animate-slideFadeIn"
+          >
+            <div className="flex justify-between items-center gap-4 mb-4">
+              <h2 className="text-3xl font-semibold text-primary">
+                {selected.name}
+              </h2>
 
-            <span className="inline-block text-sm px-3 py-1 rounded-full bg-surface border border-border text-textMuted">
-              {selected.proficiency}
-            </span>
-          </div>
+              <span className="inline-block text-sm px-3 py-1 rounded-full bg-surface border border-border text-textMuted">
+                {selected.proficiency}
+              </span>
+            </div>
 
-          <p className="text-textMuted mb-6">{selected.description}</p>
+            <p className="text-textMuted mb-6">{selected.description}</p>
 
-          <div className="space-y-4">
-            <div>
-              <p className="font-medium text-text mb-1">Technologies:</p>
-              <div className="flex flex-wrap gap-2">
-                {selected.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1 rounded bg-surface border border-border text-sm"
-                  >
-                    {tech}
-                  </span>
-                ))}
+            <div className="space-y-4">
+              <div>
+                <p className="font-medium text-text mb-1">Technologies:</p>
+                <div className="flex flex-wrap gap-2">
+                  {selected.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 rounded bg-surface border border-border text-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <p className="font-medium text-text mb-1">Experience:</p>
+                <p className="text-textMuted">{selected.experience}</p>
               </div>
             </div>
-
-            <div>
-              <p className="font-medium text-text mb-1">Experience:</p>
-              <p className="text-textMuted">{selected.experience}</p>
-            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
