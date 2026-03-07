@@ -2,6 +2,7 @@
 import Link from "next/link";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const Saber = ({ isDark }: { isDark: boolean }) => (
   <svg
@@ -67,6 +68,16 @@ export default function Nav() {
   return (
     <nav className="w-full border-b border-border">
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+        <Link href="/">
+          {" "}
+          <Image
+            src="/logo.svg"
+            alt="Logo"
+            width={64}
+            height={64}
+            className="rounded-full"
+          />
+        </Link>
         <Link href="/">Home</Link>
         <Link href="/skills">Skills</Link>
         <Link href="/projects">Projects</Link>

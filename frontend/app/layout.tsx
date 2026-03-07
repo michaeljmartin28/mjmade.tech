@@ -17,3 +17,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     </html>
   );
 }
+
+export const metadata = {
+  title: "mjmade.tech",
+  icons: {
+    icon: "/logo.svg",
+  },
+};

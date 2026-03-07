@@ -11,8 +11,12 @@ export default function ProjectsPage() {
       experience:
         "Designed and implemented the extension end-to-end, from UX and parsing logic to publishing on the VS Code Marketplace.",
       link: "https://marketplace.visualstudio.com/items?itemName=mjmade.peek509",
-      image: "/peek509.gif",
-      imageSize: 1024,
+      image: {
+        src: "/peek509.gif",
+        width: 1200,
+        height: 0,
+        unoptimized: true,
+      },
     },
     {
       id: "mjmade",
@@ -29,8 +33,12 @@ export default function ProjectsPage() {
       experience:
         "Implemented responsive UI, custom theming, semantic design tokens, and a modular skills/projects architecture.",
       link: "https://mjmade.tech",
-      image: "/mjmade.png",
-      imageSize: 1024,
+      image: {
+        src: "/mjmade.png",
+        width: 600,
+        height: 0,
+        unoptimized: false,
+      },
     },
     {
       id: "njit",
@@ -47,8 +55,12 @@ export default function ProjectsPage() {
       experience:
         "Built the course from the ground up, including lectures, labs, and assessments.",
       link: "/projects/njit",
-      image: "/njit.svg",
-      imageSize: 512,
+      image: {
+        src: "/njit.svg",
+        width: 600,
+        height: 0,
+        unoptimized: false,
+      },
     },
   ];
 
@@ -73,10 +85,11 @@ export default function ProjectsPage() {
               {/* Image or Placeholder */}
               {project.image ? (
                 <Image
-                  src={project.image}
+                  src={project.image.src}
                   alt={project.name}
-                  width={project.imageSize || 128}
-                  height={project.imageSize || 128}
+                  width={project.image.width || 256}
+                  height={project.image.height || 256}
+                  unoptimized={project.image.unoptimized}
                   className="rounded-lg object-cover border border-border"
                 />
               ) : (
