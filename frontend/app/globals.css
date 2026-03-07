@@ -31,6 +31,13 @@
   --color-border: 63 53 89;
 
   --bg-gradient: linear-gradient(to top, #2a1f3d, #1b1429, #0b0911, #000000);
+  --bg-gradient-radial: radial-gradient(
+    to top,
+    #1f7060,
+    #1ea41c,
+    #652059,
+    #e80de4
+  );
 
   --color-text: 235 233 245; /* soft lavender-white */
   --color-text-muted: 180 170 200;
@@ -47,6 +54,13 @@
 
 body {
   background: var(--bg-gradient), rgb(var(--color-bg));
+  color: rgb(var(--color-text));
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.chatTrigger {
+  background: var(--bg-gradient-radial), rgb(var(--color-bg));
   color: rgb(var(--color-text));
   background-attachment: fixed;
   background-size: cover;

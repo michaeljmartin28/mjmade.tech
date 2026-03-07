@@ -1,28 +1,54 @@
+import Image from "next/image";
+
 export default function ProjectsPage() {
   const projects = [
     {
       id: "peek509",
-      title: "Peek509",
+      name: "Peek509: X.509 Certificate Viewer",
       description:
-        "VS Code extension for decoding PEM/CRT files with custom ASN.1 parsing.",
-      tech: ["TypeScript", "VS Code API", "ASN.1"],
+        "A Visual Studio Code extension for inspecting X.509 certificates in context, making TLS debugging and certificate analysis faster and less error-prone.",
+      technologies: ["VS Code Extension", "TypeScript", "X.509", "TLS / PKI"],
+      experience:
+        "Designed and implemented the extension end-to-end, from UX and parsing logic to publishing on the VS Code Marketplace.",
       link: "https://marketplace.visualstudio.com/items?itemName=mjmade.peek509",
+      image: "/peek509.gif",
+      imageSize: 1024,
     },
     {
-      id: "agent",
-      title: "AI Agent",
+      id: "mjmade",
+      name: "mjmade.tech",
       description:
-        "A practical LLM agent powered by a Go backend with tool integrations.",
-      tech: ["Go", "LLMs", "Vector Search"],
-      link: "/agent",
+        "My personal site and portfolio, built with modern full-stack tooling and designed for clarity, performance, and long-term iteration.",
+      technologies: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Node.js",
+      ],
+      experience:
+        "Implemented responsive UI, custom theming, semantic design tokens, and a modular skills/projects architecture.",
+      link: "https://mjmade.tech",
+      image: "/mjmade.png",
+      imageSize: 1024,
     },
     {
-      id: "mfa",
-      title: "MFA Demo",
+      id: "njit",
+      name: "NJIT CS647: Counter-hacking Techniques",
       description:
-        "A simple, secure multi-factor authentication flow built in Go.",
-      tech: ["Go", "OAuth2", "Security"],
-      link: "/mfa",
+        "A graduate-level security course, focused on offensive security, that I designed, implemented, and have been teaching for multiple years.",
+      technologies: [
+        "Offensive Security",
+        "Application Security",
+        "Penetration Testing",
+        "Curriculum Design",
+        "Secure By Design",
+      ],
+      experience:
+        "Built the course from the ground up, including lectures, labs, and assessments.",
+      link: "/projects/njit",
+      image: "/njit.svg",
+      imageSize: 512,
     },
   ];
 
@@ -34,35 +60,57 @@ export default function ProjectsPage() {
             Projects
           </h1>
           <p className="text-lg text-textMuted max-w-2xl">
-            Real engineering work with clear writeups and practical demos.
+            Some of my work that I am able and willing to share.
           </p>
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="space-y-16">
           {projects.map((project) => (
-            <a
+            <div
               key={project.id}
-              href={project.link}
-              className="bg-surfaceAlt border border-border rounded-xl p-6 hover:bg-surface transition-colors"
+              className="flex flex-col items-center text-center gap-6"
             >
-              <h2 className="text-2xl font-semibold text-primary mb-2">
-                {project.title}
-              </h2>
-              <p className="text-textMuted text-sm mb-4">
-                {project.description}
-              </p>
+              {/* Image or Placeholder */}
+              {project.image ? (
+                <Image
+                  src={project.image}
+                  alt={project.name}
+                  width={project.imageSize || 128}
+                  height={project.imageSize || 128}
+                  className="rounded-lg object-cover border border-border"
+                />
+              ) : (
+                <div className="w-32 h-32 rounded-lg bg-surfaceAlt border border-border flex items-center justify-center text-primary text-4xl font-bold">
+                  {project.name[0]}
+                </div>
+              )}
 
-              <div className="flex flex-wrap gap-2">
-                {project.tech.map((t) => (
-                  <span
-                    key={t}
-                    className="px-3 py-1 rounded bg-surface border border-border text-xs"
-                  >
-                    {t}
-                  </span>
-                ))}
+              {/* Text Content */}
+              <div className="space-y-3 max-w-xl">
+                <a
+                  href={project.link}
+                  className="text-3xl font-semibold text-primary hover:text-primary/80"
+                >
+                  {project.name}
+                </a>
+
+                <p className="text-textMuted text-sm leading-relaxed">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap justify-center gap-2">
+                  {project.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-2 py-1 rounded bg-surfaceAlt border border-border text-xs"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="h-px w-full bg-border/40" />
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
