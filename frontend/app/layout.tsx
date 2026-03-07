@@ -6,7 +6,7 @@ import Agent from "./components/agent/Agent";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className="max-w-3xl mx-auto">
         <Nav />
         <main className="p-6">{children}</main>
