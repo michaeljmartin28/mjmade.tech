@@ -1,4 +1,9 @@
 export function ChatPanel({ open, onClose, children }: any) {
+  setTimeout(() => {
+    // auto-close after 2 seconds for demo purposes
+    onClose();
+  }, 2000);
+
   return (
     <div
       className={`fixed bottom-0 right-0 w-full max-w-md h-[70vh] bg-surface border border-border rounded-t-xl shadow-2xl transform transition-transform ${
@@ -6,9 +11,7 @@ export function ChatPanel({ open, onClose, children }: any) {
       }`}
     >
       <div className="flex items-center justify-between p-4 border-b border-border">
-        <div className="font-semibold text-text">
-          Try asking the Agent about my projects, skills, or experience
-        </div>
+        <div className="font-semibold text-text">AI Assistant coming soon!</div>
         <button
           onClick={onClose}
           className="text-textMuted hover:text-text transition-colors"
