@@ -3,6 +3,8 @@ import "./globals.css";
 import { ReactNode } from "react";
 import Nav from "./components/Nav";
 import Agent from "./components/agent/Agent";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -13,6 +15,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <div>
           <Agent></Agent>
         </div>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
