@@ -1,0 +1,52 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+
+    <!-- Cube face gradients -->
+    <linearGradient id="faceFront" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+
+    <linearGradient id="faceRight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+
+    <linearGradient id="faceTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" rx="32"/>
+
+  <!-- Top face -->
+  <polygon points="600,150 740,220 600,290 460,220" fill="url(#faceTop)" />
+
+  <!-- Right face -->
+  <polygon points="740,220 740,360 600,430 600,290" fill="url(#faceRight)" />
+
+  <!-- Front face -->
+  <polygon points="460,220 600,290 600,430 460,360" fill="url(#faceFront)" />
+
+  <!-- Title text -->
+  <text x="600" y="500" text-anchor="middle"
+        fill="#E5E7EB"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif"
+        font-size="48" font-weight="600">
+    miniKMS
+  </text>
+
+  <text x="600" y="545" text-anchor="middle"
+        fill="#9CA3AF"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif"
+        font-size="24">
+    Lightweight Key Management Service
+  </text>
+</svg>
