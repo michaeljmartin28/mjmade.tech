@@ -3,6 +3,30 @@ import Image from "next/image";
 export default function ProjectsPage() {
   const projects = [
     {
+      id: "minikms",
+      name: "miniKMS: Lightweight Key Management Service",
+      description:
+        "A minimal, developer‑friendly Key Management Service inspired by AWS KMS, built to demonstrate envelope encryption, secure key storage, and a SDK-driven developer experience.",
+      technologies: [
+        "Go",
+        "Docker",
+        "Python",
+        "Node",
+        "TLS",
+        "Envelope Encryption",
+        "Key Management Service",
+      ],
+      experience:
+        "Designed and implemented a production‑style KMS from scratch, including secure key operations, an HTTP API, a TypeScript SDK, and a polished demo environment deployed behind Nginx with automated hourly resets.",
+      link: "/projects/minikms",
+      image: {
+        src: "/minikms.gif",
+        width: 1200,
+        height: 0,
+        unoptimized: true,
+      },
+    },
+    {
       id: "peek509",
       name: "Peek509: X.509 Certificate Viewer",
       description:
