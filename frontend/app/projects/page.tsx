@@ -20,7 +20,7 @@ export default function ProjectsPage() {
         "Designed and implemented a production‑style KMS from scratch, including secure key operations, an HTTP API, a TypeScript SDK, and a polished demo environment deployed behind Nginx with automated hourly resets.",
       link: "/projects/minikms",
       image: {
-        src: "/minikms.gif",
+        src: "/minikms-placeholder.svg",
         width: 1200,
         height: 0,
         unoptimized: true,
