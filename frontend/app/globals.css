@@ -106,3 +106,47 @@ body {
 .saber-dark .blade {
   fill: #ef4444; /* red-500 */
 }
+
+@property --ring-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.kms-border {
+  position: relative;
+  z-index: 0;
+}
+
+.kms-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  z-index: -1;
+
+  background: conic-gradient(
+    from var(--ring-angle),
+    #3b82f6,
+    #a855f7,
+    #ec4899,
+    #3b82f6
+  );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.kms-border:hover::before {
+  animation: kms-ring-spin 2s linear infinite;
+}
+
+@keyframes kms-ring-spin {
+  to {
+    --ring-angle: 360deg;
+  }
+}

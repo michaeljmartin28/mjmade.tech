@@ -94,7 +94,94 @@ export default function MiniKMSPage() {
   return (
     <div className="mx-auto max-w-3xl py-16 px-6">
       {/* Header */}
-      <h1 className="text-4xl text-primary font-bold mb-4">miniKMS</h1>
+      <div className=" flex my-6 justify-between">
+        <h1 className="text-4xl text-primary font-bold">miniKMS</h1>
+        <a
+          className="px-4 py-2 rounded-lg bg-background text-accent kms-border hover:cursor-pointer"
+          href="https://github.com/michaeljmartin28/miniKMS"
+          target="_blank"
+        >
+          View Project on GitHub
+        </a>
+      </div>
+      <div className="flex flex-wrap gap-4 mt-4 mb-6 items-center justify-between text-sm">
+        {/* Go SDK */}
+        <a
+          href="https://pkg.go.dev/github.com/michaeljmartin28/minikms/package/sdk/go"
+          target="_blank"
+          className="flex items-center gap-2 text-accent hover:text-primary transition-colors"
+        >
+          <span
+            className="h-8 w-8 bg-current opacity-80"
+            style={{
+              backgroundColor: "#00ADD8",
+              WebkitMask: "url(/icons/go.svg) no-repeat center",
+              mask: "url(/icons/go.svg) no-repeat center",
+              WebkitMaskSize: "contain",
+              maskSize: "contain",
+            }}
+          />
+          Go SDK
+        </a>
+
+        {/* Node SDK */}
+        <a
+          href="https://www.npmjs.com/package/@minikms/sdk"
+          target="_blank"
+          className="flex items-center gap-2 text-accent hover:text-primary transition-colors"
+        >
+          <span
+            className="h-8 w-8 opacity-80"
+            style={{
+              backgroundColor: "#CB3837",
+              WebkitMask: "url(/icons/npm.svg) no-repeat center",
+              mask: "url(/icons/npm.svg) no-repeat center",
+              WebkitMaskSize: "contain",
+              maskSize: "contain",
+            }}
+          />
+          Node SDK
+        </a>
+
+        {/* Python SDK */}
+        <a
+          href="https://pypi.org/project/minikms/"
+          target="_blank"
+          className="flex items-center gap-2 text-accent hover:text-primary transition-colors"
+        >
+          <span
+            className="h-8 w-8 bg-current opacity-80"
+            style={{
+              backgroundColor: "#3775A9",
+              WebkitMask: "url(/icons/pypi.svg) no-repeat center",
+              mask: "url(/icons/pypi.svg) no-repeat center",
+              WebkitMaskSize: "contain",
+              maskSize: "contain",
+            }}
+          />
+          Python SDK
+        </a>
+
+        {/* Docker Image */}
+        <a
+          href="https://hub.docker.com/r/michaeljmartin28/minikms"
+          target="_blank"
+          className="flex items-center gap-2 text-accent hover:text-primary transition-colors"
+        >
+          <span
+            className="h-8 w-8 opacity-80"
+            style={{
+              backgroundColor: "#2496ED",
+              WebkitMask: "url(/icons/docker.svg) no-repeat center",
+              mask: "url(/icons/docker.svg) no-repeat center",
+              WebkitMaskSize: "contain",
+              maskSize: "contain",
+            }}
+          />
+          Docker Image
+        </a>
+      </div>
+
       <p className="text-lg text-textMuted  mb-10">
         A lightweight, developer‑friendly Key Management Service inspired by AWS
         KMS. Built in Go with a clean, modular architecture and designed to
@@ -106,7 +193,7 @@ export default function MiniKMSPage() {
         you can interact with the system directly.
       </p>
       {/* Project Overview */}
-      <section className="mb-12 leading-relaxed">
+      <section className="mb-8 leading-relaxed">
         <h2 className="text-2xl text-text font-semibold mb-3">Overview</h2>
         <p className="leading-relaxed text-textMuted ">
           miniKMS provides secure key creation, envelope encryption, and data
@@ -137,10 +224,16 @@ export default function MiniKMSPage() {
 
       <section className="mb-16">
         <h2 className="text-2xl font-semibold mb-4">Live Demo</h2>
-        <p className=" mb-6">
-          Try the core miniKMS operations directly from your browser. This
-          environment is intended for demonstration purposes only. Requests are
-          rate‑limited and data is cleared frequently.
+        <p className="mb-8 text-textMuted">
+          You can try the core miniKMS operations directly in the live demo
+          below, or connect to the hosted instance at
+          <span className="text-accent"> https://minikms.mjmade.tech</span>{" "}
+          using any of the SDKs.{" "}
+          <strong>
+            This environment is intended for experimentation only.
+          </strong>{" "}
+          Please be nice. Requests are rate‑limited and data is cleared
+          frequently.
         </p>
 
         {/* Create Key */}
