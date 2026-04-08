@@ -94,10 +94,11 @@ export default function MiniKMSPage() {
   return (
     <div className="mx-auto max-w-3xl py-16 px-6">
       {/* Header */}
-      <div className=" flex my-6 justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between my-6 gap-4">
         <h1 className="text-4xl text-primary font-bold">miniKMS</h1>
+
         <a
-          className="px-4 py-2 rounded-lg bg-background text-accent kms-border hover:cursor-pointer"
+          className="px-4 py-2 rounded-lg bg-background text-accent kms-border hover:cursor-pointer w-fit"
           href="https://github.com/michaeljmartin28/miniKMS"
           target="_blank"
         >
