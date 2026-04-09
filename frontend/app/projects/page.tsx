@@ -108,14 +108,16 @@ export default function ProjectsPage() {
             >
               {/* Image or Placeholder */}
               {project.image ? (
-                <Image
-                  src={project.image.src}
-                  alt={project.name}
-                  width={project.image.width || 256}
-                  height={project.image.height || 256}
-                  unoptimized={project.image.unoptimized}
-                  className="rounded-lg object-cover border border-border"
-                />
+                <a href={project.link}>
+                  <Image
+                    src={project.image.src}
+                    alt={project.name}
+                    width={project.image.width || 256}
+                    height={project.image.height || 256}
+                    unoptimized={project.image.unoptimized}
+                    className="rounded-lg object-cover border border-border"
+                  />
+                </a>
               ) : (
                 <div className="w-32 h-32 rounded-lg bg-surfaceAlt border border-border flex items-center justify-center text-primary text-4xl font-bold">
                   {project.name[0]}

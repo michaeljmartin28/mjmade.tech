@@ -239,7 +239,7 @@ export default function MiniKMSPage() {
 
         {/* Create Key */}
         <div className="border rounded-lg p-6 mb-8">
-          <h3 className="text-xl font-semibold mb-4">Create Key</h3>
+          <h3 className="text-2xl font-semibold mb-4">Create Key</h3>
 
           <div className="space-y-4">
             <input
@@ -266,21 +266,37 @@ export default function MiniKMSPage() {
           </div>
         </div>
 
-        <div className="flex gap-4 mb-8">
+        <div className="flex gap-4 mb-8 ">
           {/* Encrypt Panel */}
           <div
             className={`
-      border rounded-lg p-6 transition-all duration-300
-      ${activePanel === "encrypt" ? "w-[80%]" : "w-[20%] opacity-60 cursor-pointer hover:opacity-100 hover:scale-[1.02] transition-all duration-200"}
-    `}
+              border rounded-lg p-6 transition-all duration-300 
+              flex flex-col items-center justify-center
+              ${
+                activePanel === "encrypt"
+                  ? "w-[90%]"
+                  : "w-[10%] opacity-60 cursor-pointer hover:opacity-100 hover:scale-[1.02] transition-all duration-200"
+              }
+            `}
             onClick={() =>
               activePanel !== "encrypt" && setActivePanel("encrypt")
             }
           >
-            <h3 className="text-xl font-semibold mb-4">Encrypt</h3>
+            <h3
+              className={`
+                text-2xl font-semibold 
+                ${
+                  activePanel === "encrypt"
+                    ? "mb-4 [writing-mode:horizontal-tb]"
+                    : "[writing-mode:vertical-rl] [text-orientation:upright] m-0"
+                }
+              `}
+            >
+              {activePanel === "encrypt" ? "Encrypt" : "ENCRYPT"}
+            </h3>
 
             {activePanel === "encrypt" && (
-              <div className="space-y-4">
+              <div className="space-y-4 w-full">
                 <input
                   className="w-full border rounded text-slate-800 px-3 py-2"
                   placeholder="Key ID"
@@ -310,17 +326,33 @@ export default function MiniKMSPage() {
           {/* Decrypt Panel */}
           <div
             className={`
-      border rounded-lg p-6 transition-all duration-300
-      ${activePanel === "decrypt" ? "w-[80%]" : "w-[20%] opacity-60 cursor-pointer hover:opacity-100 hover:scale-[1.02] transition-all duration-200"}
-    `}
+              border rounded-lg p-6 transition-all duration-300 
+              flex flex-col items-center justify-center
+              ${
+                activePanel === "decrypt"
+                  ? "w-[90%]"
+                  : "w-[10%] opacity-60 cursor-pointer hover:opacity-100 hover:scale-[1.02] transition-all duration-200"
+              }
+            `}
             onClick={() =>
               activePanel !== "decrypt" && setActivePanel("decrypt")
             }
           >
-            <h3 className="text-xl font-semibold mb-4">Decrypt</h3>
+            <h3
+              className={`
+                text-2xl font-semibold 
+                ${
+                  activePanel === "decrypt"
+                    ? "mb-4 [writing-mode:horizontal-tb]"
+                    : "[writing-mode:vertical-rl] [text-orientation:upright] m-0"
+                }
+              `}
+            >
+              {activePanel === "decrypt" ? "Decrypt" : "DECRYPT"}
+            </h3>
 
             {activePanel === "decrypt" && (
-              <div className="space-y-4">
+              <div className="space-y-4 w-full">
                 <input
                   className="w-full border text-slate-800 rounded px-3 py-2"
                   placeholder="Key ID"
@@ -392,7 +424,7 @@ export default function MiniKMSPage() {
         {/* Response Viewer */}
         <div className="border rounded-lg p-6">
           <div className="flex justify-between items-center mb-4">
-            <h3 className="text-xl font-semibold">Responses</h3>
+            <h3 className="text-2xl font-semibold">Responses</h3>
             <button
               onClick={() => setResponses([])}
               className="text-sm underline text-textMuted hover:text-text"
